@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Onboarding from './Onboarding';
+import Challenge from './Challenge';
+import SurveyFinish from './SurveyFinish';
+import Deck from './Deck';
 
 function App() {
+  const [isStarted, setIsStarted] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isStarted && !isFinished ? (
+        <Challenge handleSurveyEnd={() => setIsFinished(true)} />
+      ) : isFinished ? (
+        <SurveyFinish />
+      ) : (
+        <Onboarding onClick={() => setIsStarted(true)} />
+      )}
     </div>
   );
 }
