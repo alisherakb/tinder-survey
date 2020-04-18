@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/tinder-survey/static/css/main.aca4078b.chunk.css",
-    "main.js": "/tinder-survey/static/js/main.4b6d2845.chunk.js",
-    "main.js.map": "/tinder-survey/static/js/main.4b6d2845.chunk.js.map",
+    "main.css": "/tinder-survey/static/css/main.cc132951.chunk.css",
+    "main.js": "/tinder-survey/static/js/main.410cb193.chunk.js",
+    "main.js.map": "/tinder-survey/static/js/main.410cb193.chunk.js.map",
     "runtime-main.js": "/tinder-survey/static/js/runtime-main.dff16c9d.js",
     "runtime-main.js.map": "/tinder-survey/static/js/runtime-main.dff16c9d.js.map",
-    "static/js/2.408e6d08.chunk.js": "/tinder-survey/static/js/2.408e6d08.chunk.js",
-    "static/js/2.408e6d08.chunk.js.map": "/tinder-survey/static/js/2.408e6d08.chunk.js.map",
+    "static/js/2.a3359f46.chunk.js": "/tinder-survey/static/js/2.a3359f46.chunk.js",
+    "static/js/2.a3359f46.chunk.js.map": "/tinder-survey/static/js/2.a3359f46.chunk.js.map",
     "index.html": "/tinder-survey/index.html",
-    "precache-manifest.6ff057ebe6c8d47a7ce027adc4feaed8.js": "/tinder-survey/precache-manifest.6ff057ebe6c8d47a7ce027adc4feaed8.js",
+    "precache-manifest.2c7a72943a02f9c7d0d91c3ee147ca73.js": "/tinder-survey/precache-manifest.2c7a72943a02f9c7d0d91c3ee147ca73.js",
     "service-worker.js": "/tinder-survey/service-worker.js",
-    "static/css/main.aca4078b.chunk.css.map": "/tinder-survey/static/css/main.aca4078b.chunk.css.map",
-    "static/js/2.408e6d08.chunk.js.LICENSE.txt": "/tinder-survey/static/js/2.408e6d08.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/tinder-survey/static/media/logo.5d5d9eef.svg"
+    "static/css/main.cc132951.chunk.css.map": "/tinder-survey/static/css/main.cc132951.chunk.css.map",
+    "static/js/2.a3359f46.chunk.js.LICENSE.txt": "/tinder-survey/static/js/2.a3359f46.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dff16c9d.js",
-    "static/js/2.408e6d08.chunk.js",
-    "static/css/main.aca4078b.chunk.css",
-    "static/js/main.4b6d2845.chunk.js"
+    "static/js/2.a3359f46.chunk.js",
+    "static/css/main.cc132951.chunk.css",
+    "static/js/main.410cb193.chunk.js"
   ]
 }
