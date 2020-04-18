@@ -5,8 +5,7 @@ import './App.css';
 
 const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
   const {
-    name,
-    age,
+    tags,
     distance,
     text,
     pics,
@@ -25,22 +24,82 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
         ),
       }}
     >
-      {/* <animated.div
-        {...bind(i)}
-        style={{
-          backgroundColor: 'black',
-          opacity: interpolate([rot], trans),
-        }}
-      /> */}
       <animated.div
         {...bind(i)}
         style={{
           transform: interpolate([rot, scale], trans),
         }}
       >
-        {style == 0 ? (
+        {style === 0 ? (
           <div className="card">
             <img src={pics[0]} alt="profilePicture" />
+            <animated.div
+              style={{
+                opacity: x.interpolate([0, 100], [0, 1]),
+                position: 'absolute',
+                top: 32,
+                left: 16,
+                right: 0,
+                bottom: 0,
+                width: 80,
+                height: 48,
+                zIndex: 3,
+                border: 'solid',
+                fontSize: 32,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderWidth: 5,
+                borderColor: '#33CB76',
+                fontWeight: 700,
+                color: '#33CB76',
+              }}
+            >
+              <span
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: 'center',
+                  paddingLeft: 5,
+                }}
+              >
+                YES
+              </span>
+            </animated.div>
+            <animated.div
+              style={{
+                opacity: x.interpolate([-100, 0], [1, 0]),
+                position: 'absolute',
+                top: 32,
+                left: 200,
+                bottom: 0,
+                width: 80,
+                height: 48,
+                zIndex: 3,
+                fontSize: 32,
+                fontWeight: 700,
+                border: 'solid',
+                fontSize: 32,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderWidth: 5,
+                borderColor: '#F85067',
+                color: '#F85067',
+              }}
+            >
+              <span
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: 'center',
+                  paddingLeft: 10,
+                }}
+              >
+                NO
+              </span>
+            </animated.div>
+            <div className="tagContainer">
+              <span>{tags}</span>
+            </div>
             <img
               id="separator"
               src={require('./coupon.png')}
@@ -53,9 +112,76 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
               <span>{distance}</span>
             </div>
           </div>
-        ) : style == 1 ? (
+        ) : style === 1 ? (
           <div className="card">
             <img src={pics[0]} alt="profilePicture" />
+            <animated.div
+              style={{
+                opacity: x.interpolate([0, 100], [0, 1]),
+                position: 'absolute',
+                top: 32,
+                left: 16,
+                right: 0,
+                bottom: 0,
+                width: 80,
+                height: 48,
+                zIndex: 3,
+                border: 'solid',
+                fontSize: 32,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderWidth: 5,
+                borderColor: '#33CB76',
+                fontWeight: 700,
+                color: '#33CB76',
+              }}
+            >
+              <span
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: 'center',
+                  paddingLeft: 5,
+                }}
+              >
+                YES
+              </span>
+            </animated.div>
+            <animated.div
+              style={{
+                opacity: x.interpolate([-100, 0], [1, 0]),
+                position: 'absolute',
+                top: 32,
+                left: 200,
+                bottom: 0,
+                width: 80,
+                height: 48,
+                zIndex: 3,
+                fontSize: 32,
+                fontWeight: 700,
+                border: 'solid',
+                fontSize: 32,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderWidth: 5,
+                borderColor: '#F85067',
+                color: '#F85067',
+              }}
+            >
+              <span
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: 'center',
+                  paddingLeft: 10,
+                }}
+              >
+                NO
+              </span>
+            </animated.div>
+            <div className="tagContainer">
+              <span>{tags}</span>
+            </div>
             <img
               id="separator"
               src={require('./coupon.png')}
@@ -75,6 +201,70 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
           </div>
         ) : (
           <div className="text-card">
+            <animated.div
+              style={{
+                opacity: x.interpolate([0, 100], [0, 1]),
+                position: 'absolute',
+                top: 64,
+                left: 16,
+                right: 0,
+                bottom: 0,
+                width: 80,
+                height: 48,
+                zIndex: 3,
+                border: 'solid',
+                fontSize: 32,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderWidth: 5,
+                borderColor: '#33CB76',
+                fontWeight: 700,
+                color: '#33CB76',
+              }}
+            >
+              <span
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: 'center',
+                  paddingLeft: 5,
+                }}
+              >
+                YES
+              </span>
+            </animated.div>
+            <animated.div
+              style={{
+                opacity: x.interpolate([-100, 0], [1, 0]),
+                position: 'absolute',
+                top: 64,
+                left: 200,
+                bottom: 0,
+                width: 80,
+                height: 48,
+                zIndex: 3,
+                fontSize: 32,
+                fontWeight: 700,
+                border: 'solid',
+                fontSize: 32,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderWidth: 5,
+                borderColor: '#F85067',
+                color: '#F85067',
+              }}
+            >
+              <span
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: 'center',
+                  paddingLeft: 10,
+                }}
+              >
+                NO
+              </span>
+            </animated.div>
             <div className="discount-style">
               <h2>{text}</h2>
             </div>
@@ -86,8 +276,6 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
 };
 
 Card.propTypes = {
-  name: string,
-  age: number,
   distance: string,
   text: string,
   pics: array,

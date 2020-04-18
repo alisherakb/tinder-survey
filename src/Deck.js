@@ -12,10 +12,9 @@ const to = (i) => ({
   rot: 0,
   delay: i * 50,
 });
-const from = (i) => ({ x: 0, rot: 0, scale: 1.2, y: -1000 });
+const from = (i) => ({ x: 0, rot: 0, scale: 0.9, y: -100 });
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
-const trans = (r, s) =>
-  `rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
+const trans = (r, s) => `scale(${s - 0.05})`;
 
 const Deck = ({ onCardDrop, onSurveyEnd }) => {
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
@@ -42,7 +41,7 @@ const Deck = ({ onCardDrop, onSurveyEnd }) => {
         const isGone = gone.has(index);
         const x = isGone ? (200 + window.innerWidth) * dir : down ? xDelta : 0; // When a card is gone it flys out left or right, otherwise goes back to zero
         const rot = xDelta / 100 + (isGone ? dir * 10 * velocity : 0); // How much the card tilts, flicking it harder makes it rotate faster
-        const scale = down ? 1.1 : 1; // Active cards lift up a bit
+        const scale = down ? 1.05 : 1; // Active cards lift up a bit
         onCardDrop(isGone, dir, index);
         return {
           x,

@@ -129,10 +129,10 @@
 .challenge > div {
   position: absolute;
   width: 100vw;
-  height: 100vh;
-  will-change: transform;
+  /* will-change: transform; */
   display: flex;
-  align-items: center;
+  top: 56px;
+  /* align-items: center; */
   justify-content: center;
 }
 
@@ -160,13 +160,14 @@ img {
   pointer-events: none;
 }
 
-.card > div {
-  /* height: 160px !important; */
-}
+/* .card > div {
+  height: 160px !important;
+} */
 
 .text-card {
   border-radius: 10px;
   padding: 24px 16px;
+  margin-top: 56px;
   max-width: 300px;
   text-align: center;
   overflow: hidden;
@@ -180,14 +181,10 @@ img {
   /* padding-bottom: 24px; */
   overflow: hidden;
   background-color: white;
-  background-size: auto 85%;
-  background-repeat: no-repeat;
-  background-position: center center;
   width: 45vh;
   max-width: 300px;
   /* height: 85vh; */
   height: 450px;
-  will-change: transform;
   border-radius: 18px;
   box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.1),
     0 10px 10px -10px rgba(50, 50, 73, 0.1);
@@ -244,7 +241,7 @@ img {
   display: flex;
   flex-direction: row;
   position: absolute;
-  bottom: 24px;
+  bottom: 16px;
   left: 18px;
 }
 .card-distance img {
@@ -255,4 +252,41 @@ img {
   margin-left: 8px;
   font-size: 16px;
   color: #758092;
+}
+.progress {
+  width: 90%;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  left: 16px;
+  top: 24px;
+}
+.progress-text {
+  width: 90%;
+  align-items: center;
+  text-align: left;
+  color: white;
+  position: absolute;
+  right: 0px;
+  left: 24px;
+  top: 24px;
+}
+
+.tagContainer {
+  position: absolute;
+  top: 14px;
+  display: flex;
+  left: 16px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 4px 18px !important;
+  justify-content: center;
+  border-radius: 12px;
+  max-height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.tagContainer span {
+  color: white;
+  text-align: center;
+  font-size: 14px;
 }
